@@ -13,11 +13,14 @@ display_menu() {
 apt-get update && apt-get upgrade -y
 
 # Install QEMU and its utilities
+apt-get install xfce4 xrdp gzip -y
 apt-get install qemu -y
 apt install qemu-utils -y
 apt install qemu-system-x86-xen -y
 apt install qemu-system-x86 -y
 apt install qemu-kvm -y
+
+echo xfce4-session >~/.xsession
 
 echo "QEMU installation completed successfully."
 
@@ -57,7 +60,7 @@ qemu-img create -f raw "$img_file" 50G
 echo "Image file $img_file created successfully."
 
 # Download Virtio driver ISO
-wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-1/virtio-win-0.1.215.iso'
+wget -O virtio-win.iso 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso'
 
 echo "Virtio driver ISO downloaded successfully."
 
