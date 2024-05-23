@@ -13,7 +13,7 @@ display_menu() {
 apt-get update && apt-get upgrade -y
 
 # Install QEMU and its utilities
-apt get install xfce4 -y
+apt-get install xfce4 -y
 apt get install xrdp gzip -y
 apt get install gzip -y
 apt get install qemu -y
