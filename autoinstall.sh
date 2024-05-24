@@ -13,16 +13,12 @@ display_menu() {
 apt-get update && apt-get upgrade -y
 
 # Install QEMU and its utilities
-apt-get install xfce4 -y
-apt get install xrdp gzip -y
-apt get install gzip -y
-apt get install qemu -y
+
+apt-get install qemu -y
 apt install qemu-utils -y
 apt install qemu-system-x86-xen -y
 apt install qemu-system-x86 -y
 apt install qemu-kvm -y
-
-echo xfce4-session >~/.xsession
 
 echo "QEMU installation completed successfully."
 
